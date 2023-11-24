@@ -3,7 +3,7 @@ module "vpc" {
   version = "5.1.1" # stable-ish version
 
   name = var.name
-  cidr = ["10.90.0.0/16"]
+  cidr = var.vpc_cidr
   azs             = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
   private_subnets = var.private_subnets
   public_subnets = var.public_subnets
